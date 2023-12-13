@@ -1,0 +1,68 @@
+{% extends "index.html" %} {% block content %}
+
+<head>
+  <link rel="stylesheet" href="../static/homepage.css" />
+  <script type="xxxx/xxxxxxxxxx" src="x" url_for('static', filename='jquery.min.js' }}" )></script>
+  <script type="xxxx/xxxxxxxxxx" src="x" url_for('static', filename='ajax_js.js' }}" )></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="../static/homepage.js"></script>
+</head>
+
+<div class="container page-container">
+  <h1>Discover New Books</h1>
+
+  <section class="banner-container">
+    <img
+      src="../static/images/bookshelf-with-books.jpg"
+      aria-label="page-library-banner"
+    />
+    <!-- image source: https://static.vecteezy.com/system/resources/thumbnails/006/296/747/small/bookshelf-with-books-biography-adventure-novel-poem-fantasy-love-story-detective-art-romance-banner-for-library-book-store-genre-of-literature-illustration-in-flat-style-vector.jpg -->
+  </section>
+
+  <section class="spotlight-container">
+    <div class="section-header">SPOTLIGHT</div>
+    <div class="spotlight-div" id="{{ bookId }}">
+      <div class="spotlight-cover">
+        <img src="{{ spotlightImg }}" aria-label="spotlight-book-cover" />
+      </div>
+      <div class="spotlight-info">
+        <h2 class="book-title">{{ spotlightTitle }}</h2>
+        <div class="author-stars">
+          <p class="author">{{ spotlightAuthor }}</p>
+          <p class="stars">Rating: {{ averageRating }}</p>
+          <p>{{ count }}</p>
+        </div>
+        <p class="info">{{ spotlightInfo }}</p>
+      </div>
+      <button class="like-btn" id="like-btn">
+        <img src="../static/images/love.png" class="like-img" />
+        <!-- image source: https://www.flaticon.com/free-icon/love_2961957?term=like&page=1&position=23&origin=tag&related_id=2961957 -->
+        <!-- https://www.flaticon.com/free-icon/heart_833472?term=like&page=1&position=24&origin=tag&related_id=833472 -->
+      </button>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener("load", function () {
+      window.cookieconsent.initialise({
+        pallette: {
+          popup: {
+            background: "#eaf7f7",
+            text: "#5c7291",
+          },
+          button: {
+            background: "#56cbdb",
+            text: "#ffffff",
+          },
+        },
+        content: {
+          message: "This website uses cookies",
+          dismiss: "Great",
+        },
+      });
+    });
+  </script>
+
+</div>
+
+{% endblock %}

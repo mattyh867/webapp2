@@ -1,0 +1,75 @@
+.page-container {
+  background: #f9f9f9;
+  height: 100%;
+  width: 100%;
+  color: #4a4a4a;
+  text-align: center;
+  overflow: auto;
+}
+
+.navbar-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-left {
+  margin-right: 20rem;
+}
+
+.nav-right {
+  margin-left: 20rem;
+}
+
+.book-icon-li {
+  height: 5rem;
+  width: 5rem;
+  margin-right: 5rem;
+}
+
+.book-icon {
+  height: 5rem;
+  width: 5rem;
+}
+
+.login-btn {
+  left: 0;
+}
+
+.container-fluid {
+  background: #4a4a4a;
+}
+
+.body {
+  background: linear-gradient(45deg, #1e1299, #d01131);
+  height: 100%;
+}
+
+.navbar-btn:hover {
+  background-color: #9d9d9d;
+  transition: fill 0.3s ease;
+}
+
+th {
+  width: 10%;
+  padding: 3rem;
+  color: #f6d00c;
+  text-align: center;
+}
+
+td {
+  width: 10%;
+  padding: 3rem;
+  color: #f1daf6;
+}
+
+.session-user {
+  color: #f9f9f9;
+  padding-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  tbody {
+    font-size: 10px;
+  }
+}

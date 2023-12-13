@@ -1,0 +1,71 @@
+{% extends "index.html" %} {% block content %}
+
+<head>
+  <link rel="stylesheet" href="../static/your_reviews.css" />
+</head>
+
+<div class="container page-container">
+  <h1>Your Reviews</h1>
+
+  <section class="banner-container">
+    <img
+      src="../static/images/ma_creative_writing.jpg"
+      aria-label="page-review-banner"
+      class="review-banner"
+    />
+    <!-- image source: https://www.tees.ac.uk/postgraduate_courses/english_&_creative_writing/ma_creative_writing_and_wellbeing_%28online%29.cfm -->
+  </section>
+
+  <section class="reviews-section">
+    <button id="popupButton">+ New Review</button>
+    <div class="reviews-div">
+      <div class="review-stats">
+        <p>Number of Reviews: {{ reviewCount }}</p>
+      </div>
+
+      <div class="review-list">
+        {% for i in range(reviewCount) %}
+        <div class="review-item" id="{{ reviewId[i] }}">
+          <img
+            class="bookImg"
+            src="{{ reviewImg[i] }}"
+            aria-label="book-cover"
+          />
+
+          <div class="non-img-items">
+            <p class="review-item-title">{{ reviewBook[i] }}</p>
+            <div class="review-item-rating">Rating : {{ reviewRating[i] }}</div>
+            <p class="review-item-content">" {{ reviewContent[i] }} "</p>
+          </div>
+
+          <form method="post" action="/delete_review">
+            <input type="hidden" name="review_id" value="{{ reviewId[i] }}" />
+            <button class="delete-button" type="submit" id="delete-button">
+              <i class="fa fa-trash"></i> Delete
+            </button>
+          </form>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <div class="popupContainer" id="popupContainer">
+    <div class="popupContent" id="popupContent">
+      <span class="closePopupBtn" id="closePopupBtn">&times;</span>
+      <p>Add a new review</p>
+      <form action="" method="post" name="login">
+        {{ form.hidden_tag() }}
+        <p class="input-field">Title : {{ form.title }}<br /></p>
+        <p class="input-field">Rating 1-10 : {{ form.rating }}</p>
+        <p class="input-field">Review : {{ form.content }}</p>
+        <p><input type="submit" value="Submit" /></p>
+      </form>
+      <p id="submitError">{{ error }}</p>
+    </div>
+  </div>
+
+  <script src="../static/your_reviews.js"></script>
+</div>
+
+{% endblock %}

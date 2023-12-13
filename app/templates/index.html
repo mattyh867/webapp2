@@ -1,0 +1,104 @@
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text.css"
+      href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta name="viewport" content="width=device-width" , initial-scale="1" />
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>No title</title>
+    {% endif %}
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-inverse"
+      style="margin-bottom: 0; border-radius: 0"
+    >
+      <div class="container-fluid" style="padding: 2rem">
+        <div class="navbar-header">
+          <ul class="navbar-nav nav-left">
+            <li class="book-icon-li">
+              <img
+                class="book-icon"
+                src="../static/images/book.png"
+                aria-label="book-icon"
+              />
+              <!-- book icon from flaticon.com -->
+            </li>
+            <li class="btn navbar-btn">
+              <a
+                style="color: #f9f9f9; font-size: 2rem"
+                href="/homepage"
+                aria-label="homepage-button"
+                >Homepage</a
+              >
+            </li>
+            <li class="btn navbar-btn">
+              <a
+                style="color: #f9f9f9; font-size: 2rem"
+                href="/your_reviews"
+                aria-label="your-reviews-button"
+                >Your Reviews</a
+              >
+            </li>
+            <li class="btn navbar-btn">
+              <a
+                style="color: #f9f9f9; font-size: 2rem"
+                href="/your_likes"
+                aria-label="your-likes-button"
+                >Your Likes</a
+              >
+            </li>
+          </ul>
+          <ul class="navbar-nav nav-right">
+            <li class="login-btn btn navbar-btn">
+              <a
+                style="color: #f9f9f9; font-size: 2rem"
+                href="/login"
+                aria-label="log-out-button"
+                >Log Out</a
+              >
+            </li>
+            <li class="session-user">{{ sessionUser }}</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      window.addEventListener("load", function () {
+        window.cookieconsent.initialise({
+          pallette: {
+            popup: {
+              background: "#eaf7f7",
+              text: "#5c7291",
+            },
+            button: {
+              background: "#56cbdb",
+              text: "#ffffff",
+            },
+          },
+          content: {
+            message: "This website uses cookies",
+            dismiss: "Great",
+          },
+        });
+      });
+    </script>
+
+    <div>{% block content %}{% endblock %}</div>
+  </body>
+</html>

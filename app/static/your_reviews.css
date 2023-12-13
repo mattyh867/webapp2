@@ -1,0 +1,99 @@
+.page-container {
+  padding: 5rem;
+}
+
+.banner-container {
+  padding-top: 5rem;
+  padding-top: 0;
+}
+
+.review-banner {
+  scale: 0.7;
+}
+
+.review-item-title {
+  font-size: 2rem;
+}
+
+.reviews-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews-div {
+  border: 2px solid #4a4a4a;
+  width: 70%;
+}
+
+.review-item {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookImg {
+  padding-right: 5rem;
+}
+
+.delete-button {
+  margin-left: 5rem;
+  background-color: red;
+  background: red;
+  color: #f9f9f9;
+}
+
+#delete_button {
+  background-color: red;
+}
+
+#popupButton {
+  margin: 2rem;
+  background-color: #4cb639;
+  color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.popupContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.popupContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.closePopupBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+}
+
+.likes-banner {
+  scale: 0.6;
+}

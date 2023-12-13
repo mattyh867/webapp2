@@ -1,0 +1,50 @@
+{% extends "index.html" %} {% block content %}
+
+<head>
+  <link rel="stylesheet" href="../static/your_reviews.css" />
+</head>
+
+<div class="container page-container">
+  <h1>Your Likes</h1>
+
+  <section class="banner-container-likes">
+    <img
+      src="../static/images/like.png"
+      aria-label="page-review-banner"
+      class="likes-banner"
+    />
+    <!-- image from "https://www.flaticon.com/free-icons/like" by freepik -->
+  </section>
+
+  <section class="reviews-section">
+    <div class="reviews-div">
+      <div class="review-stats">
+        <p>Number of Likes: {{ likeCount }}</p>
+      </div>
+
+      <div class="review-list">
+        {% for i in range(likeCount) %}
+        <div class="review-item" id="{{ likeId[i] }}">
+          <img class="bookImg" src="{{ likeImg[i] }}" aria-label="book-cover" />
+
+          <div class="non-img-items">
+            <p class="review-item-title">{{ likeBook[i] }}</p>
+            <p class="review-item-author">{{ likeAuthor[i] }}</p>
+          </div>
+
+          <form method="post" action="/delete_like">
+            <input type="hidden" name="like_id" value="{{ likeId[i] }}" />
+            <button class="delete-button" type="submit" id="delete-button">
+              <i class="fa fa-trash"></i> Delete
+            </button>
+          </form>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <script src="../static/your_reviews.js"></script>
+</div>
+
+{% endblock %}

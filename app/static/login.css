@@ -1,0 +1,43 @@
+html {
+  background-color: #f9f9f9;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+}
+
+.login-section {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+.login-box {
+  border: 2px solid #4a4a4a;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.login-prompt {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.back {
+  background-color: #f9f9f9;
+  height: 100%;
+  width: 100%;
+}
+
+.login-books-img {
+  scale: 0.6;
+}
+
+.back-btn {
+  background-color: red;
+  color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 1rem;
+}

@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../static/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta name="viewport" content="width=device-width" , initial-scale="1" />
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>No title</title>
+    {% endif %}
+  </head>
+  <body>
+    <div class="back">
+      <section class="login-section">
+        <div class="login-box">
+          <div class="login-prompt">
+            Please enter your username and password to log in:
+          </div>
+          <form action="" method="post" name="login">
+            {{ form.hidden_tag() }}
+            <p class="input-field">Username : {{ form.username }}<br /></p>
+            <p class="input-field">Password : {{ form.password }}</p>
+            <p><input type="submit" value="Log in" /></p>
+          </form>
+          <div>
+            <a
+              class="register-btn"
+              href="/register"
+              aria-label="register-button"
+              >Register</a
+            >
+          </div>
+        </div>
+        <img src="../static/images/login-books.png" class="login-books-img"></img>
+        <!-- image from https://www.flaticon.com/authors/popo2021 -->
+      </section>
+    </div>
+
+    <div>{% block content %}{% endblock %}</div>
+  </body>
+</html>

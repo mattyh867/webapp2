@@ -1,0 +1,52 @@
+.banner-container {
+  padding-top: 5rem;
+}
+
+.spotlight-container {
+  margin: 5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.page-container {
+  padding: 5rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.spotlight-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-header {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #4a4a4a;
+  margin-bottom: 4rem;
+}
+
+.spotlight-info {
+  width: 50rem;
+}
+
+.book-title {
+  font-size: 3rem;
+}
+
+.spotlight-cover {
+  padding-right: 2rem;
+}
+
+.like-btn {
+  height: 5rem;
+  width: 5rem;
+}
+
+.like-btn img {
+  height: 3rem;
+  width: 3rem;
+}
